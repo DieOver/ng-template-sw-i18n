@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ILANGUAGE } from 'src/app/shared/models/ILANGUAGE';
 import { LanguageService } from 'src/app/shared/services/language.service';
 
 @Component({
@@ -17,12 +16,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  showAlert() {
+  showAlert(): void {
     const text = this.translateService.instant('LOGIN.ALERT.TEXT');
     alert(text);
   }
 
-  changeLanguage(lng: string) {
+  changeLanguage(lng: string): void {
     this.languageService.setLanguage(lng);
   }
 

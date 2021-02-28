@@ -1,4 +1,7 @@
-<button color="primary" *ngFor="let language of languageService.getLanguages()" (click)="changeLanguage(language.value)">{{ language.text }}</button>
+<section id="languages">
+  <button mat-raised-button color="primary" (click)="changeLanguage('en')">{{ 'LNG.EN.TEXT' | translate }}</button>
+  <button mat-raised-button color="primary" (click)="changeLanguage('pt')">{{ 'LNG.PT.TEXT' | translate }}</button>
+</section>
 <br /><br />
 <p>{{ 'LOGIN.TITLE' | translate }}</p>
 <br /><br />
