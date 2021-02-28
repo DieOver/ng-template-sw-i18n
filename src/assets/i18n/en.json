@@ -1,0 +1,17 @@
+{
+  "LNG": {
+    "PT": {
+      "TEXT": "Portuguese"
+    },
+    "EN": {
+      "TEXT": "English"
+    }
+  },
+  "LOGIN": {
+    "TITLE": "Title",
+    "BTN": "Alert",
+    "ALERT": {
+      "TEXT": "An simple alert!"
+    }
+  }
+}
