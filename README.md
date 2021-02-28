@@ -1,0 +1,1 @@
+# ng-template-sw-i18n
