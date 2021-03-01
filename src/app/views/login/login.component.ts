@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { LanguageService } from 'src/app/shared/services/language.service';
 
 @Component({
@@ -9,20 +9,24 @@ import { LanguageService } from 'src/app/shared/services/language.service';
 })
 export class LoginComponent implements OnInit {
 
+  loginForm = this.fb.group({
+    username: ['', [Validators.required, Validators.minLength(4)]],
+    password: ['', [Validators.required, Validators.minLength(4)]]
+  });
+
   constructor(
-    private translateService: TranslateService,
+    private fb: FormBuilder,
     public languageService: LanguageService
   ) { }
 
   ngOnInit(): void {}
 
-  showAlert(): void {
-    const text = this.translateService.instant('LOGIN.ALERT.TEXT');
-    alert(text);
-  }
-
   changeLanguage(lng: string): void {
     this.languageService.setLanguage(lng);
+  }
+
+  onSubmit() {
+    console.log('loginForm', this.loginForm.value);
   }
 
 }

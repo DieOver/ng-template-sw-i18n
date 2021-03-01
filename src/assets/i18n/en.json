@@ -10,6 +10,13 @@
   "LOGIN": {
     "TITLE": "Title",
     "BTN": "Alert",
+    "FORM": {
+      "USERNAME": "Username",
+      "PASSWORD": "Password"
+    },
+    "BUTTONS": {
+      "LOGIN": "LogIn"
+    },
     "ALERT": {
       "TEXT": "An simple alert!"
     }

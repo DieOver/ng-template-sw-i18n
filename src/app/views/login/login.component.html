@@ -1,8 +1,23 @@
-<section id="languages">
-  <button mat-raised-button color="primary" (click)="changeLanguage('en')">{{ 'LNG.EN.TEXT' | translate }}</button>
-  <button mat-raised-button color="primary" (click)="changeLanguage('pt')">{{ 'LNG.PT.TEXT' | translate }}</button>
+<section class="container">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'LOGIN.FORM.USERNAME' | translate }}</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'LOGIN.FORM.PASSWORD' | translate }}</mat-label>
+        <input matInput formControlName="password">
+      </mat-form-field>
+    </div>
+    <div>
+      <button type="submit" [disabled]="!loginForm.valid" class="full-width" mat-raised-button color="primary">{{ 'LOGIN.BUTTONS.LOGIN' | translate }}</button>
+    </div>
+  </form>
+  <div>
+    <button type="button" mat-raised-button color="primary" (click)="changeLanguage('en')">{{ 'LNG.EN.TEXT' | translate }}</button>
+    <button type="button" mat-raised-button color="primary" (click)="changeLanguage('pt')">{{ 'LNG.PT.TEXT' | translate }}</button>
+  </div>
 </section>
-<br /><br />
-<p>{{ 'LOGIN.TITLE' | translate }}</p>
-<br /><br />
-<button mat-raised-button color="primary" (click)="showAlert()">{{ 'LOGIN.BTN' | translate}}</button>
